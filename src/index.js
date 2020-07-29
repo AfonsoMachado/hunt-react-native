@@ -1,7 +1,7 @@
 import React from 'react';
 import Routes from './routes';
-import './config/statusBarConfig'
+import './config/statusBarConfig';
 
-const App = () => <Routes />
+const App = () => <Routes />;
 
 export default App;

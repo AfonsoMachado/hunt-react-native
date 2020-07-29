@@ -33,7 +33,9 @@ export default class Main extends Component {
   loadMore = () => {
     const {page, productInfo} = this.state;
 
-    if (page === productInfo.pages) return;
+    if (page === productInfo.pages) {
+      return;
+    }
 
     // Avança a pagina
     const pageNumber = page + 1;
@@ -46,13 +48,12 @@ export default class Main extends Component {
       <Text style={styles.productTitle}>{item.title}</Text>
       <Text style={styles.productDescription}>{item.description}</Text>
 
-      <TouchableOpacity 
-        style={styles.productButton} 
+      <TouchableOpacity
+        style={styles.productButton}
         onPress={() => {
           console.log('ok');
-          this.props.navigation.navigate('Product', { product: item })
-        }}
-      >
+          this.props.navigation.navigate('Product', {product: item});
+        }}>
         <Text style={styles.productButtonText}>Acessar</Text>
       </TouchableOpacity>
     </View>

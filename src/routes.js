@@ -6,7 +6,7 @@ import Product from './pages/product';
 export default createStackNavigator(
   {
     Main,
-    Product
+    Product,
   },
   {
     navigationOptions: {
